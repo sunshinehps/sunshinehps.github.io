@@ -147,7 +147,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/08/gs/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/08/split_cat/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -161,7 +161,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/10/08/gs/" class="post-title-link" itemprop="url">未命名</a>
+            <a href="/2022/10/08/split_cat/" class="post-title-link" itemprop="url">linux 文件的分割与合并</a>
         </h2>
 
         <div class="post-meta">
@@ -172,7 +172,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-10-08 16:51:15 / 修改时间：19:07:23" itemprop="dateCreated datePublished" datetime="2022-10-08T16:51:15+08:00">2022-10-08</time>
+              <time title="创建时间：2022-10-08 23:13:36 / 修改时间：23:10:35" itemprop="dateCreated datePublished" datetime="2022-10-08T23:13:36+08:00">2022-10-08</time>
             </span>
 
           
@@ -186,9 +186,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <hr>
-<hr>
-
+          <h1 id="分割文件"><a href="#分割文件" class="headerlink" title="分割文件"></a>分割文件</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">spilt -a 2 -d -b 1000M wenjian.zip wenjian</span><br><span class="line">-a 2  后缀是2位</span><br><span class="line">-d  后缀是数字</span><br><span class="line">-b 1000M 每个文件最大1000M</span><br><span class="line">wenjian.zip 要分割的文件名</span><br><span class="line">wenajin 生成的子文件前缀是 &quot;wenajin&quot;</span><br></pre></td></tr></table></figure>
+<h1 id="合并文件"><a href="#合并文件" class="headerlink" title="合并文件"></a>合并文件</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat wenjain* &gt; wenjain.zip</span><br></pre></td></tr></table></figure>
       
     </div>
 
