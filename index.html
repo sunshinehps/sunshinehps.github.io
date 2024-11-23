@@ -170,10 +170,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2023-05-20 23:05:14 / 修改时间：23:15:15" itemprop="dateCreated datePublished" datetime="2023-05-20T23:05:14+08:00">2023-05-20</time>
+              <time title="创建时间：2023-05-20 23:05:14" itemprop="dateCreated datePublished" datetime="2023-05-20T23:05:14+08:00">2023-05-20</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-11-23 23:09:04" itemprop="dateModified" datetime="2024-11-23T23:09:04+08:00">2024-11-23</time>
+              </span>
 
           
 
@@ -186,8 +192,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="蛋白质-配体分子动力学模拟-groamcs"><a href="#蛋白质-配体分子动力学模拟-groamcs" class="headerlink" title="蛋白质-配体分子动力学模拟|groamcs"></a>蛋白质-配体分子动力学模拟|groamcs</h1><p>分子动力学模拟是研究蛋白质-配体相互作用的一种重要方式。本文以含有选择性抑制剂11q的ALK的复合物结构（PDB ID:5j7h）为例，展示使用gromacs做动力学模拟的全过程。</p>
-<p><img src="C:\Users\Hai Ping\Desktop\pig\5j7h.png" alt="5j7h"></p>
+          <h1 id="蛋白质-配体分子动力学模拟-groamcs"><a href="#蛋白质-配体分子动力学模拟-groamcs" class="headerlink" title="蛋白质-配体分子动力学模拟|groamcs"></a>蛋白质-配体分子动力学模拟|groamcs</h1><p>分子动力学模拟是研究蛋白质-配体相互作用的一种重要方式。本文以含有选择性抑制剂11q的ALK的复合物结构（PDB ID:6mx8）为例，展示使用gromacs做动力学模拟的全过程。</p>
+<p><img src="D:\blog\picture\6mx8.jpeg" alt="5j7h"></p>
 <h2 id="复合物结构"><a href="#复合物结构" class="headerlink" title="复合物结构"></a>复合物结构</h2><p>做动力学模拟的前提是需要知道复合物的结构信息。本文中使用的复合物结构下载自<a target="_blank" rel="noopener" href="https://www.rcsb.org/">RCSB <strong>PDB</strong>: Homepage</a>，其结构由实验测定。需要注意的是，有时候没有实验测定的结构，此时就需要通过计算的方法进行预测，获得做模拟所需的结构。</p>
 <p>下载好结构后需要对其进行初步处理，去掉结构中的水分子和一些多余的配体分子，考虑实际质子化状态，还需对结构仔细检查，确保不会有重大问题。这里可以使用Maestro工具中的Protein Preparation Wizard模块帮助我们完成结构的准备。</p>
 <h2 id="配体的准备"><a href="#配体的准备" class="headerlink" title="配体的准备"></a>配体的准备</h2><p>蛋白-配体的模拟，一般对蛋白使用Amber力场，配体分子使用GAFF力场。在gromacs中，蛋白部分的Amber力场比较容易获得，配体分子的处理稍繁琐。</p>
